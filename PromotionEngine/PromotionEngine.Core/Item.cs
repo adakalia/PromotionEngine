@@ -1,6 +1,6 @@
 ﻿namespace PromotionEngine.Core
 {
-    public class Items
+    public class Item
     {
         public char Sku{ get; set; }
         public int Quantity { get; set; }
