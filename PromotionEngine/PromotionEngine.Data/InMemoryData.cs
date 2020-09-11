@@ -26,7 +26,7 @@ namespace PromotionEngine.Data
             {
                 new Promotions{Id=1, Type="Single",Details="3 of A's for 130", Quantity = 3, Price = 130, PrimarySku='A'},
                 new Promotions{Id=2, Type="Single",Details="2 of B's for 45", Quantity = 2, Price = 45, PrimarySku='B'},
-                new Promotions{Id=3, Type="Single",Details="C & D For 30", Quantity = 1, Price = 30, PrimarySku='C', SecondarySku = 'D'},
+                new Promotions{Id=3, Type="Multiple",Details="C & D For 30", Quantity = 1, Price = 30, PrimarySku='C', SecondarySku = 'D'},
             };
         }
 
@@ -68,6 +68,11 @@ namespace PromotionEngine.Data
                 cartPrice += (item.Price * item.Quantity);
             }
             finalPrice = cartPrice;
+
+            if (!ApplyPromotion.CheckPromotionStatus(cart))
+            {
+                finalPrice = ApplyPromotion.ApplyPromotions(cart, promotions);
+            }
 
             return finalPrice;
         }
