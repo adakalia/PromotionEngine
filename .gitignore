@@ -6,3 +6,5 @@
 /PromotionEngine/.vs/PromotionEngine/v16
 /PromotionEngine/PromotionEngine.Core/bin/Debug/netcoreapp3.1
 /PromotionEngine/PromotionEngine.Core/obj
+/PromotionEngine/PromotionEngine.Data/obj
+/PromotionEngine/PromotionEngine.Data/bin/Debug/netcoreapp3.1
